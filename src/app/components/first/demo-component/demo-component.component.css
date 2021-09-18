@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+  }
+  
+
+  mat-cell, mat-header-cell, mat-footer-cell {
+    flex: 1; 
+    display: contents;
+    align-items: center;
+    overflow: hidden;
+    word-wrap: break-word;
+   min-height: inherit;
+}
