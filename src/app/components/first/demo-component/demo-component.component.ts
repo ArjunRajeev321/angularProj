@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { CustomServiceService } from '../../../../../src/app/services/custom-service.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { PopupComponentComponent } from '../../dialogComponent/popup-component/popup-component.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-demo-component',
@@ -18,7 +19,11 @@ export class DemoComponentComponent implements OnInit {
 
   isAvailable : boolean = false;
 
-  constructor(private fb : FormBuilder,private myService:CustomServiceService,private dialog:MatDialog) { }
+  constructor(private fb : FormBuilder,private myService:CustomServiceService,private dialog:MatDialog, private route:Router) { }
+
+  routMe():void{
+    this.route.navigate(['/check'])
+  }
 
   ngOnInit() {
     this.onload();
@@ -107,5 +112,6 @@ export class DemoComponentComponent implements OnInit {
       this.dataSource = resp;
     });
   }
+  
 
 }

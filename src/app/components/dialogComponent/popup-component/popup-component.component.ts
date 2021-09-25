@@ -22,9 +22,9 @@ export class PopupComponentComponent implements OnInit {
 
   updateMe(id:any,name:any) {
     this.lookup.updateData(id,name).subscribe(resp=>{
-      // this.route.navigate(['/home']);
-      window.location.reload();
+      // window.location.reload();
     });
+    this.route.navigate(['/check']);
   }
 
   onCancel(){
