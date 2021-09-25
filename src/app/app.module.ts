@@ -14,13 +14,17 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { PopupComponentComponent } from './components/dialogComponent/popup-component/popup-component.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { HomeComponent } from './components/home/home/home.component';
+import { CheckRouteComponent } from './components/checkRoute/check-route/check-route.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponentComponent,
-    PopupComponentComponent
+    PopupComponentComponent,
+    HomeComponent,
+    CheckRouteComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,7 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
     
   ],
   providers: [DemoServiceService,CustomServiceService],
