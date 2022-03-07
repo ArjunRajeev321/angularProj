@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { CheckRouteComponent } from './components/checkRoute/check-route/check-route.component';
 import { DemoComponentComponent } from './components/first/demo-component/demo-component.component';
 import { HomeComponent } from './components/home/home/home.component';
+import { LoginComponent } from './components/loginComponent/login/login.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 
 const routes: Routes = [
   {
@@ -15,6 +17,15 @@ const routes: Routes = [
     path : 'check',
     pathMatch: 'full',
     component : CheckRouteComponent
+  },
+  {
+    path : 'login',
+    pathMatch: 'full',
+    component : LoginComponent
+  },
+  {
+    path : 'register',
+    component : RegistrationComponent
   }
 ];
 

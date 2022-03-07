@@ -16,7 +16,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HomeComponent } from './components/home/home/home.component';
 import { CheckRouteComponent } from './components/checkRoute/check-route/check-route.component';
-
+import { LoginComponent } from './components/loginComponent/login/login.component';
+import {MatCardModule} from '@angular/material/card';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { RegisterService } from './components/registration/service/register.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { CheckRouteComponent } from './components/checkRoute/check-route/check-r
     DemoComponentComponent,
     PopupComponentComponent,
     HomeComponent,
-    CheckRouteComponent
+    CheckRouteComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +42,10 @@ import { CheckRouteComponent } from './components/checkRoute/check-route/check-r
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
+    MatCardModule
     
   ],
-  providers: [DemoServiceService,CustomServiceService],
+  providers: [DemoServiceService,CustomServiceService,RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
